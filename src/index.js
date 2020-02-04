@@ -6,9 +6,13 @@ import {
     Route
 } from "react-router-dom";
 
-import Fob from './components/fob';
+import Main from './components/main';
 import Second from './components/second';
 import NotFound from './components/NotFound';
+
+import './css/base.css';
+import './css/main.css';
+import './css/vendor.css';
 
 
 function App() {
@@ -16,7 +20,7 @@ function App() {
         <Router>
             <Switch>
                 <Route exact path="/">
-                    <Fob/>
+                    <Main/>
                 </Route>
                 <Route path="/about">
                     <Second/>
