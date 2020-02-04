@@ -1,12 +1,12 @@
 import React from "react";
 
-import Header from "./header";
+import Intro from './intro';
 
 
 export default function Main() {
     return (
         <div>
-            <Header/>
+            <Intro/>
         </div>
     )
 }
