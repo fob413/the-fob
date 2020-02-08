@@ -13,7 +13,7 @@ export class Header extends React.Component {
         let toggleButton = $('.menu-toggle'),
             nav = $('.main-navigation');
 
-        toggleButton.toggleClass('is-cl`icked');
+        toggleButton.toggleClass('is-clicked');
         nav.slideToggle();
     }
 
