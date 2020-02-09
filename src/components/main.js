@@ -2,6 +2,7 @@ import React from "react";
 
 import Intro from './intro';
 import About from "./about";
+import Resume from "./resume";
 
 
 export default function Main() {
@@ -9,6 +10,7 @@ export default function Main() {
         <div>
             <Intro/>
             <About/>
+            <Resume/>
         </div>
     )
 }
