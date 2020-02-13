@@ -2597,4 +2597,11 @@ footer .copyright span:last-child::after {
 	background: #000000;
 }
 
+.loading {
+	z-index: 1;
+	position: fixed;
+	top: 50%;
+	right: 50%;
+	text-align: center;
+}
 /*# sourceMappingURL=main.css.map */
