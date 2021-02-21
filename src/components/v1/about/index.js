@@ -12,7 +12,7 @@ export default function About() {
 
                     <div className="intro-info">
 
-                        <img src={require('../../images/profile-pic.jpg')} alt="Profile Picture" />
+                        <img src={require('../../../images/profile-pic.jpg')} alt="Profile Picture" />
 
                             <p className="lead">Passionate software developer with over 4+ years’ experience in software development, process improvement and on-time delivery of all projects. A self-motivated & committed Individual who loves challenges, quick to learn and appreciates feedback.</p>
                     </div>
