@@ -1,12 +1,57 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route
+} from "react-router-dom";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import Main from './components/v1/main';
+import Second from './components/v1/second';
+import NotFound from './components/v1/NotFound';
+import Header from "./components/v1/header";
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+import Home from "./components/v2/Home";
+import Navbar from "./components/v2/common/Navbar";
+import Work from "./components/v2/Work";
+import Projects from "./components/v2/Projects";
+
+// import Loader from "./components/loader";
+import Footer from "./components/v1/footer";
+
+import './css/base.css';
+import './css/main.css';
+import './css/vendor.css';
+
+
+function App() {
+    return (
+        <Router>
+            <div style={{ width: "80vw", margin: "auto" }}>
+                {/*/!*<Header/>*!/ // v1 header*/}
+                <Navbar/>
+                <Switch>
+                    <Route exact path="/">
+                        <Home/>
+                    </Route>
+                    <Route path="/work">
+                        <Work/>
+                    </Route>
+                    <Route path="/projects">
+                        <Projects/>
+                    </Route>
+                    <Route>
+                        <NotFound/>
+                    </Route>
+                </Switch>
+                {/*<Footer/> // v1 footer*/}
+                {/*<Loader/>*/}
+            </div>
+        </Router>
+    )
+}
+
+ReactDOM.render(
+    <App />,
+    document.getElementById('root')
+);
